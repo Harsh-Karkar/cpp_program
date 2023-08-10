@@ -10,7 +10,7 @@ class customer
     public:
      void get_info()
      {
-          cout<<"\n\t\t ************ WELCOM TO GOLAS WORLD ************ \n";
+          cout<<"\n\t\t ************ WELCOM TO PUNJABI DHABA ************ \n";
           cout<<"Enter your Name : ";
           cin>>name;
           cout<<"Enter your Contact Number : ";
@@ -34,7 +34,7 @@ class Show_bill : public customer
       double  GST  ,  disc , Net_bill,bill_amt =0 ;
       int   Bill =0 , quty;
 
-      string Ditems[5];
+      string Ditems[9];
 
      public :
 
@@ -43,15 +43,15 @@ class Show_bill : public customer
       {
          cout<<"\n \tEnter Qunatity : ";
          cin>>quty;
-         Ditems[0] = "Plain Gola = 150 ";
-         return Bill = Bill + quty*150;
+         Ditems[0] = "kaju-kari = 250 ";
+         return Bill = Bill + quty*250;
       }
 
       int item2()
       {
          cout<<"\n \tEnter Qunatity : "; 
          cin>>quty;
-         Ditems[1] = "Dry Fruit Gola = 200 ";
+         Ditems[1] = "panirtikka butter masala = 200 ";
          return Bill = Bill + quty*200;
       }
 
@@ -59,24 +59,32 @@ class Show_bill : public customer
       {
          cout<<"\n \tEnter Qunatity : "; 
          cin>>quty;
-         Ditems[2] = "Blagium Chocochips Gola = 280";
-         return Bill = Bill + quty*280;
+         Ditems[2] = "kaju-gathiya  = 300";
+         return Bill = Bill + quty*300;
       }
 
       int item4()
       {
          cout<<"\n \tEnter Qunatity : ";
          cin>>quty;
-         Ditems[3] = "Special Rajwadi Gola = 400";
-         return Bill = Bill + quty*400;
+         Ditems[3] = "panir-masalaaa = 279";
+         return Bill = Bill + quty*279;
       }
 
       int item5()
       {
          cout<<"\n \tEnter Qunatity : "; 
          cin>>quty;
-         Ditems[4] = "Chiku Chocolate Gola = 350";
-         return Bill = Bill + quty*350;
+         Ditems[4] = "kaju-masalaa = 320";
+         return Bill = Bill + quty*320;
+      }
+
+      int item6()
+      {
+         cout<<"\n \tEnter Qunatity : "; 
+         cin>>quty;
+         Ditems[4] = "kaju-angara = 310";
+         return Bill = Bill + quty*310;
       }
 
 
@@ -90,7 +98,7 @@ class Show_bill : public customer
       {
          if (bill_amt >  5000 )
         {
-            return disc = ( bill_amt *10  ) / 100; 
+            return disc = ( bill_amt *3100  ) / 250; 
         }
 
         else 
@@ -101,7 +109,7 @@ class Show_bill : public customer
 
       double Show_GST()
       {
-         return  GST = ( bill_amt * 5) / 100;  
+         return  GST = ( bill_amt * 5) / 250;  
       }
 
       double Show_Net_bill()
@@ -126,7 +134,7 @@ class Show_bill : public customer
 
          int i ;
 
-         for(i=0;i<5;i++)
+         for(i=0;i<9;i++)
          {
          if(!Ditems[i].empty())
          {
@@ -147,11 +155,11 @@ int main ()
         a.get_info();
 
         cout<<"\n\t\t\t :::::::::: Menu :::::::::: \n";
-        cout<<" \n \t\t\t [1] Plain Gola                      : RS. 150 /- "; 
-        cout<<" \n \t\t\t [2] Dry Fruit Gola                  : RS. 200 /- "; 
-        cout<<" \n \t\t\t [3] Blagium Chocochips Gola         : RS. 280 /- "; 
-        cout<<" \n \t\t\t [4] Special Rajwadi Gola            : RS. 400 /- ";
-        cout<<" \n \t\t\t [5] Chiku Chocolate Gola            : RS. 350 /- \n";
+        cout<<" \n \t\t\t [1] kaju-kari                      : RS. 250 /- "; 
+        cout<<" \n \t\t\t [2] panirtikka butter masala                  : RS. 200 /- "; 
+        cout<<" \n \t\t\t [3] kaju-gathiya          : RS. 300 /- "; 
+        cout<<" \n \t\t\t [4] panir-masalaaa            : RS. 279 /- ";
+        cout<<" \n \t\t\t [5] kaju-masalaa            : RS. 320 /- \n";
         cout<<" \n \t\t\t  Confirm Your Order       [0]  \n";
 
         int i;
@@ -164,23 +172,23 @@ int main ()
         {
         case 1: 
              a.item1();
-             //cout<<" \n \t\t\t [1] Plain Gola                         : RS. 150 \n";
+            
             break;
         case 2: 
              a.item2();
-               //  cout<<" \n \t\t\t [2] Dry Fruit Gola                 : RS. 200 \n";
+               
             break;
         case 3: 
              a.item3(); 
-               //  cout<<" \n \t\t\t [3] Blagium Chocochips Gola        : RS. 280 \n";
+               
             break;
         case 4: 
              a.item4();
-            // cout<<" \n \t\t\t [4] Special Rajwadi Gola               : RS. 400\n";
+            
             break;
         case 5: 
             a.item5();
-            //  cout<<" \n \t\t\t [5] Chiku Chocalate Gola              : RS. 350 \n";
+           
             break;
 
         case 0: 
