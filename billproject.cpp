@@ -3,9 +3,9 @@ using namespace std;
 class bill{
     public:
     string name,numb;
-    int qty[10],bill=0,grossbill=0,disc,amount[10];
+    int qty[11],bill=0,grossbill=0,disc,amount[11];
     float sgst,cgst,GST,netbill=0;
-    string items[10];
+    string items[11];
 
     void menu()
     {       cout<<"<============================================HOTEL GIRNAR ======================================>"<<endl;
@@ -76,8 +76,8 @@ class bill{
         cout<<"====>Enter Quantity :";
         cin>>qty[5];
         items[5]="\tkumbhaniya bhajiya              Rs.300/-";
-        amount[5]=qty[5]*255;
-        return bill=bill+qty[5]*255;
+        amount[5]=qty[5]*300;
+        return bill=bill+qty[5]*300;
     }
     int item7()
     {
@@ -107,9 +107,17 @@ class bill{
     {
         cout<<"====>Enter Quantity :";
         cin>>qty[9];
-        items[9]="\tExtra Topping Cheese             Rs.50/-";
-        amount[9]=qty[9]*50;
-        return bill=bill+qty[9]*50;
+        items[9]="\tbutter chapati                   Rs.25/-";
+        amount[9]=qty[9]*25;
+        return bill=bill+qty[9]*25;
+    }
+    int item11()
+    {
+        cout<<"====>Enter Quantity :";
+        cin>>qty[10];
+        items[10]="\tExtra Topping Cheese             Rs.50/-";
+        amount[10]=qty[10]*50;
+        return bill=bill+qty[10]*50;
     }
     int Gross()
     {
@@ -144,7 +152,7 @@ class bill{
     void displayitems()
     {
         int i;
-        for(i=0;i<10;i++)
+        for(i=0;i<11;i++)
         {
             if(!items[i].empty())
             {
@@ -203,6 +211,9 @@ int main()
                 break;
             case 10:
                 x.item10();
+                break;
+            case 11:
+                x.item11();
                 break;
             case 0:
                 cout<<"Your order is confirmed .\n";
